@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reach Parashnath</title>
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Aesthetic: clean, modern, legible -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Header -->
+
+  <!-- Header -->
   <header class="header">
     <div class="container header-inner">
       <div class="logo">Reach Parashnath</div>
@@ -30,14 +30,14 @@
         <h1 class="hero-title">Reach Parasnath</h1>
         <p class="hero-subtitle">Find the Best Transport to Parasnath Hill, Jharkhand</p>
         <p class="hero-desc">Discover buses and taxis to reach the sacred Parasnath Hill. Plan your pilgrimage journey with ease.</p>
-        <!-- Search Bar + Filters -->
+
+        <!-- Search and Filters -->
         <div class="search-section">
           <div class="search-row">
             <input id="searchInput" type="text" class="input" placeholder="Search a driver..." aria-label="Search a driver" />
             <button id="searchBtn" class="btn btn-primary">Search</button>
           </div>
           <div class="filter-row">
-            <!-- Filter 1: vehicle type -->
             <div class="filter-group">
               <label class="filter-label">Vehicle:</label>
               <div class="chip-group" role="group" aria-label="Vehicle filter">
@@ -46,7 +46,6 @@
                 <button class="chip" data-vehicle="van">Van</button>
               </div>
             </div>
-            <!-- Filter 2: sort by rating or non-rating -->
             <div class="filter-group">
               <label class="filter-label">Sort:</label>
               <select id="sortSelect" class="select">
@@ -58,21 +57,20 @@
           </div>
         </div>
       </div>
-      <div class="hero-visual">
-  <iframe
-    title="Map: Parasnath Hill"
-    src="https://www.google.com/maps?q=Parasnath%20Hill&output=embed"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    style="width: 100%; height: 280px; border: 0; border-radius: 12px; box-shadow: 0 10px 24px rgba(15,23,42,0.04);"
-  ></iframe>
-</div>
 
+      <div class="hero-visual">
+        <iframe
+          title="Map: Parasnath Hill"
+          src="https://www.google.com/maps?q=Parasnath%20Hill&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="width: 100%; height: 280px; border: 0; border-radius: 12px; box-shadow: 0 10px 24px rgba(15,23,42,0.04);"
+        ></iframe>
       </div>
     </div>
   </section>
 
-  <!-- Driver Sections -->
+  <!-- Driver Section -->
   <section class="drivers">
     <div class="container">
       <div class="section-header">
@@ -81,33 +79,16 @@
       </div>
 
       <div id="driversList" class="driver-grid" aria-live="polite">
-  <div class="driver-card">
-    <h3>Ravi Kumar</h3>
-    <p>Phone: 9876543210</p>
-    <p>Location: Madhuban</p>
-  </div>
-  <div class="driver-card">
-    <h3>Sunita Devi</h3>
-    <p>Phone: 9123456789</p>
-    <p>Location: Parasnath Station</p>
-  </div>
-  <div class="driver-card">
-    <h3>Manoj Singh</h3>
-    <p>Phone: 9988776655</p>
-    <p>Location: Isri Bazar</p>
-  </div>
-  <div class="driver-card">
-    <h3>Rekha Kumari</h3>
-    <p>Phone: 9871234560</p>
-    <p>Location: Giridih</p>
-  </div>
-  <div class="driver-card">
-    <h3>Ajay Yadav</h3>
-    <p>Phone: 9812345678</p>
-    <p>Location: Dumri</p>
-  </div>
-  <!-- Add 25 more driver-card blocks here -->
-</div>
+        <!-- 30 Dummy Driver Cards -->
+        <!-- You can paste the full list of 30 driver-card blocks here -->
+        <!-- Example: -->
+        <div class="driver-card">
+          <h3>Ravi Kumar</h3>
+          <p>Phone: 9876543210</p>
+          <p>Location: Madhuban</p>
+        </div>
+        <!-- Repeat for 29 more drivers -->
+      </div>
 
       <div id="emptyState" class="empty-state" hidden>
         No drivers found. Try adjusting filters or search keywords.
@@ -115,7 +96,7 @@
     </div>
   </section>
 
-  <!-- Informative Section -->
+  <!-- Info Section -->
   <section class="info">
     <div class="container">
       <div class="section-header">
@@ -129,7 +110,6 @@
           <p class="info-sub">October to March offers ideal weather and visibility.</p>
           <a href="/best-time" class="btn-link">Read more</a>
         </article>
-
         <article class="info-card">
           <h3 class="info-title">All temples</h3>
           <p class="info-sub">Explore the sacred sites across Parasnath Hill.</p>
@@ -139,7 +119,7 @@
     </div>
   </section>
 
-  <!-- About Parashnath Section -->
+  <!-- About Section -->
   <section id="about-paras" class="about">
     <div class="container about-inner">
       <div class="about-text">
@@ -163,11 +143,10 @@
         </div>
       </div>
       <div class="about-map">
-        <!-- Embedded Google Map -->
         <iframe
           title="Map: Parasnath Hill"
           src="https://www.google.com/maps?q=Parasnath%20Hill&output=embed"
-          loading="quick"
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
@@ -196,7 +175,7 @@
     </div>
   </footer>
 
-  <!-- Driver Profile Modal -->
+  <!-- Modal -->
   <div id="profileModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="profileTitle">
     <div class="modal-backdrop" data-close="true"></div>
     <div class="modal-dialog">
@@ -210,8 +189,3 @@
   <script src="/static/app.js" defer></script>
 </body>
 </html>
-
-
-
-
-

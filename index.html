@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/static/favicon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reach Parashnath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Aesthetic: clean, modern, legible -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+  <!-- Top Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">Reach Parashnath</div>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#about-paras" class="nav-link">About Parashnath</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">Reach Parasnath</h1>
+        <p class="hero-subtitle">Find the Best Transport to Parasnath Hill, Jharkhand</p>
+        <p class="hero-desc">Discover buses and taxis to reach the sacred Parasnath Hill. Plan your pilgrimage journey with ease.</p>
+        <!-- Search Bar + Filters -->
+        <div class="search-section">
+          <div class="search-row">
+            <input id="searchInput" type="text" class="input" placeholder="Search a driver..." aria-label="Search a driver" />
+            <button id="searchBtn" class="btn btn-primary">Search</button>
+          </div>
+          <div class="filter-row">
+            <!-- Filter 1: vehicle type -->
+            <div class="filter-group">
+              <label class="filter-label">Vehicle:</label>
+              <div class="chip-group" role="group" aria-label="Vehicle filter">
+                <button class="chip chip-active" data-vehicle="both">Both</button>
+                <button class="chip" data-vehicle="taxi">Taxi</button>
+                <button class="chip" data-vehicle="van">Van</button>
+              </div>
+            </div>
+            <!-- Filter 2: sort by rating or non-rating -->
+            <div class="filter-group">
+              <label class="filter-label">Sort:</label>
+              <select id="sortSelect" class="select">
+                <option value="rating_desc" selected>By rating (default)</option>
+                <option value="name_asc">By name</option>
+                <option value="price_asc">By price (low to high)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+  <iframe
+    title="Map: Parasnath Hill"
+    src="https://www.google.com/maps?q=Parasnath%20Hill&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    style="width: 100%; height: 280px; border: 0; border-radius: 12px; box-shadow: 0 10px 24px rgba(15,23,42,0.04);"
+  ></iframe>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Driver Sections -->
+  <section class="drivers">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Available Drivers</h2>
+        <p class="section-desc">Sorted by rating, filter by vehicle type, and call in one tap.</p>
+      </div>
+
+      <div id="driversList" class="driver-grid" aria-live="polite">
+        <!-- Populated by JS -->
+      </div>
+      <div id="emptyState" class="empty-state" hidden>
+        No drivers found. Try adjusting filters or search keywords.
+      </div>
+    </div>
+  </section>
+
+  <!-- Informative Section -->
+  <section class="info">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Travel information</h2>
+        <p class="section-desc">Plan smarter with concise tips and guides.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3 class="info-title">Best time</h3>
+          <p class="info-sub">October to March offers ideal weather and visibility.</p>
+          <a href="/best-time" class="btn-link">Read more</a>
+        </article>
+
+        <article class="info-card">
+          <h3 class="info-title">All temples</h3>
+          <p class="info-sub">Explore the sacred sites across Parasnath Hill.</p>
+          <a href="/temples" class="btn-link">Read more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Parashnath Section -->
+  <section id="about-paras" class="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2 class="section-title">About Parasnath Hill</h2>
+        <p class="about-desc">
+          Parasnath Hill is a sacred pilgrimage site for Jains, located in Giridih district, Jharkhand. The hill is home to 24 Jain temples and attracts thousands of devotees and trekkers every year.
+        </p>
+        <div class="about-points">
+          <div class="about-point">
+            <h3 class="point-title">Popular trekking routes</h3>
+            <p class="point-sub">Multiple scenic routes for all fitness levels.</p>
+          </div>
+          <div class="about-point">
+            <h3 class="point-title">Travel tips</h3>
+            <p class="point-sub">Best time to visit: October to March.</p>
+          </div>
+          <div class="about-point">
+            <h3 class="point-title">Local guides & accommodations</h3>
+            <p class="point-sub">Professional guides and comfortable stay options available.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-map">
+        <!-- Embedded Google Map -->
+        <iframe
+          title="Map: Parasnath Hill"
+          src="https://www.google.com/maps?q=Parasnath%20Hill&output=embed"
+          loading="quick"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Reach Parashnath</div>
+        <p class="footer-tagline">Your guide to reaching the sacred Parasnath Hill with ease.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <p class="footer-text">reachparashnath@gmail.com</p>
+          <p class="footer-text">+91 9570182966</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Quick links</h4>
+          <a href="/privacy" class="footer-link">Privacy Policy</a>
+          <a href="/terms" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Driver Profile Modal -->
+  <div id="profileModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="profileTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close" data-close="true">&times;</button>
+      <div id="profileContent">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
